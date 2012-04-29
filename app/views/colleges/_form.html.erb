@@ -1,0 +1,38 @@
+<%= form_for(@college) do |f| %>
+  <% if @college.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@college.errors.count, "error") %> prohibited this college from being saved:</h2>
+
+      <ul>
+      <% @college.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sat_min %><br />
+    <%= f.number_field :sat_min %>
+  </div>
+  <div class="field">
+    <%= f.label :sat_max %><br />
+    <%= f.number_field :sat_max %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :college_activities, "Well known college activities" %><br />
+    <%= f.text_area :college_activities %>
+  </div>
+<!--   this is obviously using the form helper. you used straight vanilla HTML in the profile view to attempt to render the input for activities. look at the form helper documentation to see what else you can do here-->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

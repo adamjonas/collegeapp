@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sat_min: 1
+  sat_max: 1
+  zip: MyString
+  name: MyString
+
+two:
+  sat_min: 1
+  sat_max: 1
+  zip: MyString
+  name: MyString

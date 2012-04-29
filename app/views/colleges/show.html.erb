@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>SAT min:</b>
+  <%= @college.sat_min %>
+</p>
+
+<p>
+  <b>SAT max:</b>
+  <%= @college.sat_max %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @college.zip %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @college.name %>
+</p>
+
+<p>
+  <b>Activities:</b>
+  <%= @college_activities.compact.each do |user|  %>
+      <%= user.email %>
+    <% end %>
+</p>
+
+<p>
+  <b>Potential Users:</b>
+  <% @potential_users.compact.each do |user|  %>
+  		<%= user.email %>
+  	<% end %>
+	</p>
+
+
+<%= link_to 'Edit', edit_college_path(@college) %> |
+<%= link_to 'Back', colleges_path %>
